@@ -41,6 +41,7 @@
     const formdata = easyFormData(params)
     axios.post("example1", payload1);
 ```
+![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/example1.jpg)
 
 ## 例子2  (example2)
 ```javascript
@@ -91,4 +92,6 @@
     const payload2 = easyFormData(params);
     axios.post("example2", payload2);
 ```
+![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/example2.jpg)
+
     
