@@ -1,7 +1,7 @@
 # easyFormData
 🙂translate from google
 
-將物件轉成formData格式
+將物件轉成formData格式  
 Convert the object to formData format
 
 
