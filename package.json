@@ -1,6 +1,6 @@
 {
   "name": "@syuminghuang/easyformdata",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🙂translate from google",
   "main": "src/index.js",
   "scripts": {
@@ -16,5 +16,6 @@
     "url": "https://github.com/MingHuang4040E095/easyFormData/issues"
   },
   "homepage": "https://github.com/MingHuang4040E095/easyFormData#readme",
-  "devDependencies": {}
+  "devDependencies": {},
+  "keywords": ["js","formdata"]
 }
