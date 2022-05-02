@@ -1,7 +1,11 @@
 # easyFormData
-將物件轉成formData格式
+🙂translate from google
 
-## 使用方法 (usage)
+將物件轉成formData格式
+Convert the object to formData format
+
+
+## 😎使用方法 (usage)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
