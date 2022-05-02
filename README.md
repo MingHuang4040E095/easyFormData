@@ -6,9 +6,15 @@ Convert the object to formData format
 
 
 ## 😎使用方法 (usage)
+```
+    npm install --save @syuminghuang/easyformdata
+```
+
 ```javascript
     // step1 import js
-    import easyFormData from "path/easyFormData.js";
+    import easyFormData from "@syuminghuang/easyformdata";
+    // or
+    const easyFormData = require("@syuminghuang/easyformdata");
 
     // step2 set params
     const params = {
