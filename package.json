@@ -1,0 +1,20 @@
+{
+  "name": "@syuminghuang/easyformdata",
+  "version": "1.0.0",
+  "description": "🙂translate from google",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MingHuang4040E095/easyFormData.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MingHuang4040E095/easyFormData/issues"
+  },
+  "homepage": "https://github.com/MingHuang4040E095/easyFormData#readme",
+  "devDependencies": {}
+}
