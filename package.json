@@ -1,9 +1,10 @@
 {
   "name": "@syuminghuang/easyformdata",
-  "version": "1.0.3",
+  "version": "1.1.3",
   "description": "🙂translate from google",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,6 +17,15 @@
     "url": "https://github.com/MingHuang4040E095/easyFormData/issues"
   },
   "homepage": "https://github.com/MingHuang4040E095/easyFormData#readme",
-  "devDependencies": {},
-  "keywords": ["web","front-end","js","formdata"]
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "keywords": [
+    "web",
+    "front-end",
+    "js",
+    "formdata"
+  ],
+  "dependencies": {}
 }
