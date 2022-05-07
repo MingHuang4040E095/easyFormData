@@ -1,8 +1,8 @@
 {
   "name": "@syuminghuang/easyformdata",
-  "version": "2.0.0",
+  "version": "2.0.8",
   "description": "🙂translate from google",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"

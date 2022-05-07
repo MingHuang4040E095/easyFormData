@@ -6,13 +6,13 @@
  * @param {[Number]} depth 深度
  * @returns 
  */
- function easyFormData(data = {}, property = "",newData = [],depth = 0) {
+function easyFormData(data = {}, property = "",newData = [],depth = 0) {
   // 判斷型態
   const type = typeof data;
   let realType = ""; // 真正的型態
   if (type === "object") {
     //如果是物件，就要判斷事物件、陣列，還是檔案
-    // 是陣
+    // 是陣列
     if (Array.isArray(data)) realType = "array";
     // 是檔案
     else if (data instanceof Blob) realType = "file";
@@ -50,19 +50,19 @@
 
 // 資料是陣列
 function dataIsArray(array = [], parentProperty, newData,depth) {
-  array.forEach((item,index)=>{
-    const newProperty = `${parentProperty}[${index}]`
-    easyFormData(item,newProperty,newData,depth)
-  })
+array.forEach(function(item,index){
+  const newProperty = `${parentProperty}[${index}]`
+  easyFormData(item,newProperty,newData,depth)
+})
 }
 
 // 資料是物件
 function dataIsObject(object = {}, parentProperty = "", newData,depth) {
-  Object.keys(object).forEach(property=>{
-    const value = object[property] // 值
-    const newProperty = parentProperty ? `${parentProperty}[${property}]` : property
-    easyFormData(value,newProperty,newData,depth)
-  })
+Object.keys(object).forEach(function(property){
+  const value = object[property] // 值
+  const newProperty = parentProperty ? `${parentProperty}[${property}]` : property
+  easyFormData(value,newProperty,newData,depth)
+})
 }
 
 module.exports = easyFormData;
