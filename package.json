@@ -1,6 +1,6 @@
 {
   "name": "@syuminghuang/easyformdata",
-  "version": "1.1.3",
+  "version": "2.0.0",
   "description": "🙂translate from google",
   "main": "dist/index.js",
   "scripts": {
