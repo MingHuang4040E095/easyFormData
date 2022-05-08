@@ -1,5 +1,5 @@
 # easyFormData
-![npm](https://img.shields.io/npm/dw/@syuminghuang/easyformdata)
+![npm](https://img.shields.io/npm/dw/@syuminghuang/easyformdata)  
 🙂translate from google
 
 將物件轉成formData格式  
