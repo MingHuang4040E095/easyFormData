@@ -6,7 +6,7 @@
  * @param {[Number]} depth 深度
  * @returns 
  */
-function easyFormData(data = {}, property = "",newData = [],depth = 0) {
+ function easyFormData(data = {},options = {}, property = "",newData = [],depth = 0) {
   // 判斷型態
   const type = typeof data;
   let realType = ""; // 真正的型態
@@ -25,13 +25,12 @@ function easyFormData(data = {}, property = "",newData = [],depth = 0) {
   // 如果是第一次進來，型態必須為物件
   if (realType !== "object" && depth === 0) throw new Error("only object!!");
   const nextDepth = depth + 1;
-
   switch (realType) {
     case "array":
-      dataIsArray(data,property,newData,nextDepth);
+      dataIsArray(data,options,property,newData,nextDepth);
       break;
     case "object":
-      dataIsObject(data,property,newData,nextDepth);
+      dataIsObject(data,options,property,newData,nextDepth);
       break;
     default:
       newData.push({
@@ -41,7 +40,7 @@ function easyFormData(data = {}, property = "",newData = [],depth = 0) {
   }
   if(depth === 0){
     const formData = new FormData();
-    newData.forEach(item => {
+    newData.forEach(function(item){
       formData.append(item.formDataProperty, item.value);
     })
     return formData
@@ -49,20 +48,32 @@ function easyFormData(data = {}, property = "",newData = [],depth = 0) {
 }
 
 // 資料是陣列
-function dataIsArray(array = [], parentProperty, newData,depth) {
-array.forEach(function(item,index){
-  const newProperty = `${parentProperty}[${index}]`
-  easyFormData(item,newProperty,newData,depth)
-})
+function dataIsArray(array = [],options, parentProperty, newData,depth) {
+  array.forEach(function(item,index){
+    const newProperty = `${parentProperty}[${index}]`
+    easyFormData(item,options,newProperty,newData,depth)
+  })
 }
 
 // 資料是物件
-function dataIsObject(object = {}, parentProperty = "", newData,depth) {
-Object.keys(object).forEach(function(property){
-  const value = object[property] // 值
-  const newProperty = parentProperty ? `${parentProperty}[${property}]` : property
-  easyFormData(value,newProperty,newData,depth)
-})
+function dataIsObject(object = {},options, parentProperty = "", newData,depth) {
+  Object.keys(object).forEach(function(property){
+    const isIgnore = options.ignore ? options.ignore.includes(property) : false // 判斷是否要忽略
+    if(isIgnore) return
+    const value = object[property] // 值
+    const newValue = options.convert ? convertData(value,property,options.convert) : value
+    const newProperty = parentProperty ? `${parentProperty}[${property}]` : property
+    easyFormData(newValue,options,newProperty,newData,depth)
+  })
+}
+
+// 資料轉換
+function convertData(value,property,convert = []){
+  if(convert.length === 0) return value
+  const target = convert.find(function(item){
+    return item.targetProperty === property && item.currentValue === value
+  })
+  return target ? target.convertValue : value
 }
 
 module.exports = easyFormData;
