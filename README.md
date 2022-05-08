@@ -30,8 +30,8 @@ Convert the object to formData format
     const formdata = easyFormData(params)
 
 ```
-
-## 例子1  (example1)
+## 基本用法 basic
+####### 例子1  (example1)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
@@ -53,11 +53,11 @@ Convert the object to formData format
 ```
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/example1.jpg)
 
-## 例子2  (example2)
+####### 例子2  (example2)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
-    import axios from 'axios';
+    import axios from 'axios'; // 用於請求
 
     // step2 set params
     const params = {
@@ -104,4 +104,47 @@ Convert the object to formData format
 ```
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/example2.jpg)
 
+
+## 進階用法 Advanced
+####### 例子1  (example1)
+```javascript
+    // step1 import js
+    import easyFormData from "path/easyFormData.js";
+    import axios from 'axios'; // 用於請求
+
+    // step2 set params
+    const params = {
+      id:1,
+      name:'MH',
+      account:'example1@gmail.com',
+      education: {
+        primarySchool:'primarySchool',
+        juniorHighSchool:'juniorHighSchool',
+        seniorHighSchool:'seniorHighSchool',
+        university:'university'
+      }
+    }
+
+    // step3 set options
+    const options = {
+      // 1. "convert" 轉換目標屬性的值
+      // 1. "convert"  Convert the value of the target property
+      convert:[
+        {
+          targetProperty:'name', // 目標屬性 target property
+          currentValue:'MH', // 當前的值 current value
+          convertValue:'Hello World!!' // 轉換後的值 convert value
+        },
+      ],
+      // 2. "ignore" 要忽略的屬性
+      // 2. "ignore" properties to ignore
+      ignore:['account','primarySchool','juniorHighSchool']
+    }
+
+    // step4 get formdata
+    const payload1 = easyFormData(params,options);
+    axios.post("advancedExample1", payload1);
+```
+![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/advancedExample1.jpg)
+![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/advancedExample1.gif)
     
