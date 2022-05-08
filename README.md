@@ -147,4 +147,84 @@ Convert the object to formData format
 ```
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/advancedExample1.jpg)
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/advancedExample1.gif)
+
+###### 例子2  (example2)
+```javascript
+    // step1 import js
+    import easyFormData from "path/easyFormData.js";
+    import axios from 'axios'; // 用於請求
     
+    // step2 set params
+    const params = {
+      www: false,
+      test: {
+        a: 111,
+        b: 222
+      },
+      sellers: [
+        {
+          id: "1",
+          nickname: "MH",
+          account: "user1@gmail.com",
+          product: [
+            {
+              name: "RTX 3060",
+              price: 12000,
+              quantity: 1,
+              status: true
+            },
+            {
+              name: "RTX 3070",
+              price: 18790,
+              quantity: 2,
+              status: false
+            }
+          ]
+        },
+        {
+          id: "2",
+          nickname: "profiteer",
+          account: "user2@gmail.com",
+          product: [
+            {
+              name: "RTX 3060",
+              price: 15000,
+              quantity: 150,
+              status: true
+            },
+            {
+              name: "RTX 3070",
+              price: 23000,
+              quantity: 200,
+              status: false
+            }
+          ]
+        }
+      ]
+    };
+
+    // step3 set options
+    const options = {
+      //  convert轉換值
+      convert: [
+        {
+          targetProperty: "status", // 要轉換的屬性
+          currentValue: false, // 當前的值
+          convertValue: "0" // 轉換後的值
+        },
+        {
+          targetProperty: "status", // 要轉換的屬性
+          currentValue: true, // 當前的值
+          convertValue: "1" // 轉換後的值
+        }
+      ],
+      // 要跳過的屬性
+      ignore: ["www", "name", "nickname"]
+    };
+
+    // step4 get formdata
+    const payload4 = easyFormData(params,options);
+    axios.post("advancedExample2", payload4);
+````
+![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/advancedExample2.jpg)
+![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/advancedExample2.gif)
