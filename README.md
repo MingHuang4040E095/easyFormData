@@ -31,7 +31,7 @@ Convert the object to formData format
 
 ```
 ## 基本用法 basic
-####### 例子1  (example1)
+###### 例子1  (example1)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
@@ -53,7 +53,7 @@ Convert the object to formData format
 ```
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/example1.jpg)
 
-####### 例子2  (example2)
+###### 例子2  (example2)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
@@ -106,7 +106,7 @@ Convert the object to formData format
 
 
 ## 進階用法 Advanced
-####### 例子1  (example1)
+###### 例子1  (example1)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
