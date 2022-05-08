@@ -1,6 +1,7 @@
 /**
  * 簡單轉formData
  * @param {[Any]} data 資料，第一次須為物件
+ * @param {[Object]} options 細部設定
  * @param {[String]} property 屬性
  * @param {[Array]} newData 新的資料
  * @param {[Number]} depth 深度
@@ -8,24 +9,14 @@
  */
  function easyFormData(data = {},options = {}, property = "",newData = [],depth = 0) {
   // 判斷型態
-  const type = typeof data;
-  let realType = ""; // 真正的型態
-  if (type === "object") {
-    //如果是物件，就要判斷事物件、陣列，還是檔案
-    // 是陣列
-    if (Array.isArray(data)) realType = "array";
-    // 是檔案
-    else if (data instanceof Blob) realType = "file";
-    // 是物件
-    else realType = "object";
-  } else {
-    // 其他型態
-    realType = type;
-  }
+  const typeData = getDataType(data)
+  const typeOptions = getDataType(options)
+
   // 如果是第一次進來，型態必須為物件
-  if (realType !== "object" && depth === 0) throw new Error("only object!!");
+  if (typeData !== "object" && depth === 0) throw new Error("data only object!!");
+  if (typeOptions !== "object") throw new Error("options only object!!");
   const nextDepth = depth + 1;
-  switch (realType) {
+  switch (typeData) {
     case "array":
       dataIsArray(data,options,property,newData,nextDepth);
       break;
@@ -45,6 +36,26 @@
     })
     return formData
   }
+}
+
+// 取得型態
+function getDataType(data){
+  // 判斷型態
+  const type = typeof data;
+  let realType = ""; // 真正的型態
+  if (type === "object") {
+    //如果是物件，就要判斷事物件、陣列，還是檔案
+    // 是陣列
+    if (Array.isArray(data)) realType = "array";
+    // 是檔案
+    else if (data instanceof Blob) realType = "file";
+    // 是物件
+    else realType = "object";
+  } else {
+    // 其他型態
+    realType = type;
+  }
+  return realType
 }
 
 // 資料是陣列
