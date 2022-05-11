@@ -1,10 +1,9 @@
 # easyFormData
 ![npm](https://img.shields.io/npm/dt/@syuminghuang/easyformdata)  
+Convert multi-dimensional arrays or objects to formdata format
+可將多維度陣列或物件轉換成formdata格式
+
 🙂translate from google
-
-將物件轉成formData格式  
-Convert the object to formData format
-
 
 ## 😎使用方法 (usage)
 ```
@@ -31,8 +30,8 @@ Convert the object to formData format
     const formdata = easyFormData(params)
 
 ```
-## 基本用法 basic
-###### 例子1  (example1)
+## 基本用法 (basic)
+###### 範例1  (example1)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
@@ -54,7 +53,7 @@ Convert the object to formData format
 ```
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/example1.jpg)
 
-###### 例子2  (example2)
+###### 範例2  (example2)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
@@ -106,8 +105,8 @@ Convert the object to formData format
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/example2.jpg)
 
 
-## 進階用法 Advanced
-###### 例子1  (example1)
+## 進階用法 (advanced)
+###### 範例1  (example1)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
@@ -149,7 +148,7 @@ Convert the object to formData format
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/advancedExample1.jpg)
 ![image](https://github.com/MingHuang4040E095/easyFormData/blob/main/image/advancedExample1.gif)
 
-###### 例子2  (example2)
+###### 範例2  (example2)
 ```javascript
     // step1 import js
     import easyFormData from "path/easyFormData.js";
