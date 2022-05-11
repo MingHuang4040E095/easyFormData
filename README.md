@@ -1,8 +1,8 @@
 # easyFormData
 ![npm](https://img.shields.io/npm/dt/@syuminghuang/easyformdata)  
-🙂translate from google
-可將多維度陣列或物件轉換成formdata格式
-Convert multi-dimensional arrays or objects to formdata format
+🙂translate from google  
+可將多維度陣列或物件轉換成formdata格式  
+Convert multi-dimensional arrays or objects to formdata format  
 
 
 ## 😎使用方法 (usage)
