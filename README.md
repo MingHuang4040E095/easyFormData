@@ -34,7 +34,7 @@ Convert multi-dimensional arrays or objects to formdata format
 ###### 範例1  (example1)
 ```javascript
     // step1 import js
-    import easyFormData from "path/easyFormData.js";
+    import easyFormData from "@syuminghuang/easyformdata";
     import axios from 'axios';
 
     // step2 set params
@@ -56,7 +56,7 @@ Convert multi-dimensional arrays or objects to formdata format
 ###### 範例2  (example2)
 ```javascript
     // step1 import js
-    import easyFormData from "path/easyFormData.js";
+    import easyFormData from "@syuminghuang/easyformdata";
     import axios from 'axios'; // 用於請求
 
     // step2 set params
@@ -109,7 +109,7 @@ Convert multi-dimensional arrays or objects to formdata format
 ###### 範例1  (example1)
 ```javascript
     // step1 import js
-    import easyFormData from "path/easyFormData.js";
+    import easyFormData from "@syuminghuang/easyformdata";
     import axios from 'axios'; // 用於請求
 
     // step2 set params
@@ -151,7 +151,7 @@ Convert multi-dimensional arrays or objects to formdata format
 ###### 範例2  (example2)
 ```javascript
     // step1 import js
-    import easyFormData from "path/easyFormData.js";
+    import easyFormData from "@syuminghuang/easyformdata";
     import axios from 'axios'; // 用於請求
     
     // step2 set params
