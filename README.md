@@ -32,7 +32,7 @@ Convert multi-dimensional arrays or objects to formdata format
     const formdata = easyFormData(params)
     axios.post("example1", payload1);
 ```
-![image](https://github.com/MingHuang4040E095/easyFormData/blob/%E7%A7%BB%E9%99%A4%E7%AF%84%E4%BE%8B%E5%9C%96%E7%89%87/image/example1.jpg)
+![image](https://github.com/MingHuang4040E095/easyFormData/blob/%E7%A7%BB%E9%99%A4%E7%AF%84%E4%BE%8B%E5%9C%96%E7%89%87/image/example.jpg)
 
 ###### 範例2  (example2)
 ```javascript
