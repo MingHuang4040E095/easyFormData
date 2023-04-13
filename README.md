@@ -10,26 +10,6 @@ Convert multi-dimensional arrays or objects to formdata format
     npm install --save @syuminghuang/easyformdata
 ```
 
-```javascript
-    // step1 import js
-    import easyFormData from "@syuminghuang/easyformdata";
-    // or
-    const easyFormData = require("@syuminghuang/easyformdata");
-
-    // step2 set params
-    const params = {
-        id:123,
-        userInfo:{
-            name:'MH',
-            tel:['0911-111-111','0922-222-222'],
-            account:'email@gmail.com',
-        }
-    }
-
-    // step3 get formdata
-    const formdata = easyFormData(params)
-
-```
 ## 📌基本用法 (basic)
 ###### 範例1  (example1)
 ```javascript
@@ -44,6 +24,7 @@ Convert multi-dimensional arrays or objects to formdata format
             name:'MH',
             tel:['0911-111-111','0922-222-222'],
             account:'email@gmail.com',
+            file: file // <--- upload file
         }
     }
 
