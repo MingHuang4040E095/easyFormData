@@ -1,6 +1,6 @@
 {
   "name": "@syuminghuang/easyformdata",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "🙂Convert multi-dimensional arrays or objects to formdata format",
   "main": "src/index.js",
   "scripts": {
